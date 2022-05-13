@@ -8,9 +8,20 @@
     <link rel="stylesheet" type="text/css" href="styles/style.css"/>
 </head>
 <body>
+    <p>Pasirinkus sudėtingumo lygį<br> spauskit play migtuką</p>
+    <p>Spaudikit kairį pelės mygtuką,<br> kad užaugint stulpelį iki viršaus</p>
     <div class="gameWindow">
         <div>
-            
+            <form>Select Dificulty<br>
+                <input type="radio" id="easy" name="dificulty" value="1000">
+                <label for="easy">easy</label><br>
+                <input type="radio" id="normal" name="dificulty" value="100" checked>
+                <label for="normal">normal</label><br>
+                <input type="radio" id="hard" name="dificulty" value="10" >
+                <label for="hard">hard</label><br>
+                <input type="radio" id="insane" name="dificulty" value="1" >
+                <label for="insane">insane</label>
+              </form>
             <div class="startgame">
                 <button class="start">Play</button>
             </div>
