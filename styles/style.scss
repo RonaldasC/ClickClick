@@ -1,3 +1,4 @@
+
 .langas {
     height: 300px;
     width: 200px;
@@ -8,6 +9,25 @@
     justify-content: center;
     justify-content: space-around;
 }
+menu{
+    padding-left: 0px;
+//     justify-content: center;
+//     align-items: center;
+}
+.menu {
+    position: absolute;
+    height: 300px;
+    width: 200px;
+    background-color: rgba(128, 128, 128, 0.7);
+    border: 1px solid black;
+    //display: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+// button {
+//     position: absolute;    
+// }
 #player {
     height: 0px;
     width: 20px;

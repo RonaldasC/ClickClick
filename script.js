@@ -1,18 +1,18 @@
 'use strict';
+//kodas pradedantis zaidimą
+document.getElementById('start').addEventListener('click', pradedam);
+function pradedam() {
+    if ('click') {
+        document.getElementsByClassName('menu')[0].style.display = 'none';
+        startSetInterval();
+    }
+}
+
 //kodo dalis atsakinga už ai stulpelio didėjimą
+
+function startSetInterval() {
+    
 let aiSkaiciuokle = 0;
-
-//function laikoSkaiciuokleSustabdyta();
-//setTimeout(laikoskaiciuokle, 90000);
-// let stopedLaikoSkaiciuokle = clearInterval(laikoskaiciuokle);
-
-
-// document.getElementsByClassName('langas')[0].addEventListener('click', start());
-
-// function start() {
-//     let laikoskaiciuokle = setInterval(naujasKintamasis, 100);
-// }
-
 
 let laikoskaiciuokle = setInterval(naujasKintamasis, 100);
 
@@ -27,6 +27,7 @@ function naujasKintamasis() {
 function aiAukscioAtvaizdavimas() {
     document.getElementById('ai').style.height = aiSkaiciuokle + 'px';
 }
+
 //kodo dalis atsakinga už player stulpelio didėjimą
 let playerSkaiciuokle = 0;
 
@@ -39,18 +40,15 @@ function stopingClickEvent () {
 function playerMouseClicks() {
 
     playerSkaiciuokle++;
-    if (playerSkaiciuokle === 300){
+    if (playerSkaiciuokle === 10){
         console.log('Laimėjai');//pakeisti į laimėjimo langą
         clearInterval(laikoskaiciuokle);//sutabdo ai stulpelio didėjima jei laimi žaidėjas
         stopingClickEvent ();
-
     } 
     playerAukscioAtvaizdavimas();
-    
 }
 function playerAukscioAtvaizdavimas() {
     document.getElementById('player').style.height = playerSkaiciuokle + 'px';
+    }   
 }
-
-
 
