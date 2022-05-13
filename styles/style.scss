@@ -1,9 +1,23 @@
-
-.langas {
+@mixin dimention300x200() {
     height: 300px;
     width: 200px;
-    background-color: skyblue;
+}
+@mixin border(){
     border: 1px solid black;
+}
+@mixin absolutenone(){
+    position: absolute;
+    display: none;
+}
+@mixin playerAidimentionDefault() {
+    height: 0px;
+    width: 20px;
+}
+
+.langas {
+    @include dimention300x200();
+    @include border();
+    background-color: skyblue;
     display: flex;
     align-items: flex-end;
     justify-content: center;
@@ -11,55 +25,44 @@
 }
 .startgame {
     position: absolute;
-    height: 300px;
-    width: 200px;
+    @include dimention300x200();
+    @include border();
     background-color: rgba(128, 128, 128, 0.7);
-    border: 1px solid black;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 .endgame {
-    position: absolute;
-    height: 300px;
-    width: 200px;
+    
+    @include dimention300x200();
+    @include border();
     background-color: rgb(235, 135, 135);
-    border: 1px solid black;
-    // display: flex;
-    // justify-content: center;
-    // align-items: center;
-    display: none;//svarbi vieta display perkėlus į iršu kodas neveiks
+    @include absolutenone();
 }
 .btnPlayAgain {
    height: 30px;
    width: 80px;
    margin-top: 135px;
    margin-left: 60px;
-
 }
-
 #player {
-    height: 0px;
-    width: 20px;
+    @include playerAidimentionDefault();
     background-color: darkolivegreen;
 }
 #ai {
-    height: 0px;
-    width: 20px;
+    @include playerAidimentionDefault();
     background-color: rgb(207, 76, 174);
 }
 .youWin {
-    position: absolute;
-    display: none;
+    @include absolutenone();
     
 }
 .youLose {
-    position: absolute;
-    display: none;
+    @include absolutenone();
 
 }
  h2 {
      width: 200px;
-     text-align: center;
      margin-top: 40px;
+     text-align: center;
 }
