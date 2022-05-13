@@ -7,24 +7,25 @@ function pradedam() {
         startGame();
     }
 }
-
-//kodo dalis atsakinga už ai stulpelio didėjimą
-
+//kodo dalis atsakinga už AI1 stulpelio didėjimą
 function startGame() {
     
 let aiSkaiciuokle = 0;
-let laikoskaiciuokle = setInterval(naujasKintamasis, 100);
+let laikoskaiciuokle = setInterval(skaiciuojaAistulpelioAuksti, 10);
 
-function naujasKintamasis() {
+function skaiciuojaAistulpelioAuksti() {
     aiSkaiciuokle++;
     if (aiSkaiciuokle === 300){
         clearInterval(laikoskaiciuokle);
         console.log('Pralaimėjai');
+        document.getElementsByClassName('youLose')[0].style.display = 'block';
+        document.getElementsByClassName('endgame')[0].style.display = 'block';
     }
     aiAukscioAtvaizdavimas();
 }
 function aiAukscioAtvaizdavimas() {
     document.getElementById('ai').style.height = aiSkaiciuokle + 'px';
+    
 }
 
 //kodo dalis atsakinga už player stulpelio didėjimą
@@ -43,25 +44,24 @@ function playerMouseClicks() {
         console.log('Laimėjai');//pakeisti į laimėjimo langą
         clearInterval(laikoskaiciuokle);//sutabdo ai stulpelio didėjima jei laimi žaidėjas
         stopingClickEvent ();
+        document.getElementsByClassName('youWin')[0].style.display = 'block';
         document.getElementsByClassName('endgame')[0].style.display = 'block';
-    } 
+    }   
     playerAukscioAtvaizdavimas();
+    
 }
 function playerAukscioAtvaizdavimas() {
     document.getElementById('player').style.height = playerSkaiciuokle + 'px';
     }   
-
-   
 }
-
-// dalis atsakinga uz zaidimo paleidimą dar kartą
-document.getElementsByClassName('btnPlayAgain')[0].addEventListener('click', PlayAgain);
-function PlayAgain() {
+   
+const btnClick = document.getElementsByClassName('btnPlayAgain')[0].addEventListener('click', playAgain);
+function playAgain() {
     if ('click') {
         document.getElementsByClassName('endgame')[0].style.display = 'none';
         document.getElementById('player').style.height = '0px';
         startGame();
+        document.getElementsByClassName('youWin')[0].style.display = 'none';
+        document.getElementsByClassName('youLose')[0].style.display = 'none';
     }
-}
-
-
+  }
