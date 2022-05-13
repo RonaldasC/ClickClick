@@ -16,11 +16,7 @@
       justify-content: space-around;
 }
 
-menu {
-  padding-left: 0px;
-}
-
-.menu {
+.startgame {
   position: absolute;
   height: 300px;
   width: 200px;
@@ -35,6 +31,22 @@ menu {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+.endgame {
+  position: absolute;
+  height: 300px;
+  width: 200px;
+  background-color: #eb8787;
+  border: 1px solid black;
+  display: none;
+}
+
+.btnPlayAgain {
+  height: 30px;
+  width: 80px;
+  margin-top: 135px;
+  margin-left: 60px;
 }
 
 #player {

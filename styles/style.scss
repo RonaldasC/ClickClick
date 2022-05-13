@@ -9,25 +9,35 @@
     justify-content: center;
     justify-content: space-around;
 }
-menu{
-    padding-left: 0px;
-//     justify-content: center;
-//     align-items: center;
-}
-.menu {
+.startgame {
     position: absolute;
     height: 300px;
     width: 200px;
     background-color: rgba(128, 128, 128, 0.7);
     border: 1px solid black;
-    //display: none;
     display: flex;
     justify-content: center;
     align-items: center;
 }
-// button {
-//     position: absolute;    
-// }
+.endgame {
+    position: absolute;
+    height: 300px;
+    width: 200px;
+    background-color: rgb(235, 135, 135);
+    border: 1px solid black;
+    // display: flex;
+    // justify-content: center;
+    // align-items: center;
+    display: none;//svarbi vieta display perkėlus į iršu kodas neveiks
+}
+.btnPlayAgain {
+   height: 30px;
+   width: 80px;
+   margin-top: 135px;
+   margin-left: 60px;
+
+}
+
 #player {
     height: 0px;
     width: 20px;

@@ -1,19 +1,18 @@
 'use strict';
-//kodas pradedantis zaidimą
-document.getElementById('start').addEventListener('click', pradedam);
+//kodas pradedantis zaidimą 
+document.getElementsByClassName('start')[0].addEventListener('click', pradedam);
 function pradedam() {
     if ('click') {
-        document.getElementsByClassName('menu')[0].style.display = 'none';
-        startSetInterval();
+        document.getElementsByClassName('startgame')[0].style.display = 'none';
+        startGame();
     }
 }
 
 //kodo dalis atsakinga už ai stulpelio didėjimą
 
-function startSetInterval() {
+function startGame() {
     
 let aiSkaiciuokle = 0;
-
 let laikoskaiciuokle = setInterval(naujasKintamasis, 100);
 
 function naujasKintamasis() {
@@ -40,15 +39,29 @@ function stopingClickEvent () {
 function playerMouseClicks() {
 
     playerSkaiciuokle++;
-    if (playerSkaiciuokle === 10){
+    if (playerSkaiciuokle === 5){
         console.log('Laimėjai');//pakeisti į laimėjimo langą
         clearInterval(laikoskaiciuokle);//sutabdo ai stulpelio didėjima jei laimi žaidėjas
         stopingClickEvent ();
+        document.getElementsByClassName('endgame')[0].style.display = 'block';
     } 
     playerAukscioAtvaizdavimas();
 }
 function playerAukscioAtvaizdavimas() {
     document.getElementById('player').style.height = playerSkaiciuokle + 'px';
     }   
+
+   
 }
+
+// dalis atsakinga uz zaidimo paleidimą dar kartą
+document.getElementsByClassName('btnPlayAgain')[0].addEventListener('click', PlayAgain);
+function PlayAgain() {
+    if ('click') {
+        document.getElementsByClassName('endgame')[0].style.display = 'none';
+        document.getElementById('player').style.height = '0px';
+        startGame();
+    }
+}
+
 
