@@ -1,0 +1,30 @@
+.langas {
+  height: 300px;
+  width: 200px;
+  background-color: skyblue;
+  border: 1px solid black;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+#stulpelis {
+  height: 30px;
+  width: 20px;
+  background-color: darkolivegreen;
+}
+
+#ai {
+  height: 30px;
+  width: 20px;
+  background-color: #cf4cae;
+}
+/*# sourceMappingURL=style.css.map */
