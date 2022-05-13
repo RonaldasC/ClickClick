@@ -17,13 +17,13 @@
 }
 
 #player {
-  height: 30px;
+  height: 0px;
   width: 20px;
   background-color: darkolivegreen;
 }
 
 #ai {
-  height: 30px;
+  height: 0px;
   width: 20px;
   background-color: #cf4cae;
 }
