@@ -6,20 +6,6 @@ function btnRadioChange(){
     return document.querySelector('input[name="dificulty"]:checked').value;
 }
 
-function dificulty(){
-    if (btnRadioChange() >= 1000) {
-        return  1000;
-    }
-    if (btnRadioChange() >= 100) {
-        return 100;
-    }
-    if (btnRadioChange() >= 10) {
-        return 10;
-    }
-    if (btnRadioChange() >= 1) {
-        return 1;
-    }
-}
 // kodas pradedantis zaidimą 
 document.getElementsByClassName('start')[0].addEventListener('click', pradedam);
 function pradedam() {
@@ -32,13 +18,12 @@ function pradedam() {
 function startGame() {
     
 let aiSkaiciuokle = 0;
-let laikoskaiciuokle = setInterval(skaiciuojaAistulpelioAuksti, dificulty());
+let laikoskaiciuokle = setInterval(skaiciuojaAistulpelioAuksti, +btnRadioChange());
 
 function skaiciuojaAistulpelioAuksti() {
     aiSkaiciuokle++;
     if (aiSkaiciuokle === 300){
         clearInterval(laikoskaiciuokle);
-        console.log('Pralaimėjai');
         document.getElementsByClassName('youLose')[0].style.display = 'block';
         document.getElementsByClassName('endgame')[0].style.display = 'block';
     }
