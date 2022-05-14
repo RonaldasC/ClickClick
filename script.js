@@ -5,7 +5,6 @@ document.getElementsByName('dificulty')[0].addEventListener('onclick', btnRadioC
 function btnRadioChange(){
     return document.querySelector('input[name="dificulty"]:checked').value;
 }
-
 // kodas pradedantis zaidimą 
 document.getElementsByClassName('start')[0].addEventListener('click', pradedam);
 function pradedam() {
