@@ -1,11 +1,10 @@
 'use strict';
 
-// kodas pasirinkti sudėtingumo lygį 
 document.getElementsByName('dificulty')[0].addEventListener('onclick', btnRadioChange);
 function btnRadioChange(){
     return document.querySelector('input[name="dificulty"]:checked').value;
 }
-// kodas pradedantis zaidimą 
+
 document.getElementsByClassName('start')[0].addEventListener('click', pradedam);
 function pradedam() {
     if ('click') {
@@ -13,7 +12,7 @@ function pradedam() {
         startGame();
     }
 }
-//kodo dalis atsakinga už AI1 stulpelio didėjimą
+
 function startGame() {
     
 let aiSkaiciuokle = 0;
@@ -45,7 +44,7 @@ function playerMouseClicks() {
 
     playerSkaiciuokle++;
     if (playerSkaiciuokle === 300){
-        clearInterval(laikoskaiciuokle);//sutabdo ai stulpelio didėjima jei laimi žaidėjas
+        clearInterval(laikoskaiciuokle);
         stopingClickEvent ();
         document.getElementsByClassName('youWin')[0].style.display = 'block';
         document.getElementsByClassName('endgame')[0].style.display = 'block';
