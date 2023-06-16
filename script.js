@@ -31,7 +31,7 @@ function aiAukscioAtvaizdavimas() {
     document.getElementById('ai').style.height = aiSkaiciuokle + 'px';
     
 }
-//kodo dalis atsakinga už player stulpelio didėjimą
+
 let playerSkaiciuokle = 0;
 
 document.getElementsByClassName('langas')[0].addEventListener('click', playerMouseClicks);
